@@ -1,56 +1,151 @@
 # EpicChat
 
-**EpicChat** es un chatbot construido con [Streamlit](https://streamlit.io/) y la API de [OpenAI](https://openai.com/) que sirve como asistente para el EPIC Lab del ITAM. Permite a los usuarios resolver dudas sobre programas, iniciativas y eventos, así como recibir orientación para desarrollar ideas o proyectos emprendedores.
-
-## Tabla de Contenidos
-
-1. [Características](#características)  
-2. [Requisitos](#requisitos)  
-3. [Instalación y Ejecución Local](#instalación-y-ejecución-local)  
-4. [Configuración de la API Key de OpenAI](#configuración-de-la-api-key-de-openai)  
-5. [Estructura del Proyecto](#estructura-del-proyecto)  
-6. [Despliegue en Streamlit Cloud](#despliegue-en-streamlit-cloud)  
-7. [Uso](#uso)  
-8. [Personalización](#personalización)  
-9. [Créditos y Licencia](#créditos-y-licencia)
+**EpicChat** es un chatbot construido con [Streamlit](https://streamlit.io/) y la API de [OpenAI](https://openai.com/) que sirve como asistente para el EPIC Lab del ITAM. Su objetivo es resolver dudas sobre programas, iniciativas y eventos, además de orientar a estudiantes en el desarrollo de ideas y proyectos emprendedores.
 
 ---
 
-## Características
+## 📌 Tabla de Contenidos
 
-- 💬 Interfaz tipo chat con experiencia conversacional.
-- 🚀 Respuestas en tiempo real usando streaming de la API de OpenAI.
-- 🎓 Contexto personalizado para apoyar a estudiantes del EPIC Lab.
-- 🎨 Interfaz visual personalizada con logos e íconos de redes.
-- ☁️ Fácil despliegue en Streamlit Cloud.
+- [Características](#características)
+- [Requisitos](#requisitos)
+- [Instalación y Ejecución Local](#instalación-y-ejecución-local)
+- [Configuración de la API Key de OpenAI](#configuración-de-la-api-key-de-openai)
+- [Estructura del Proyecto](#estructura-del-proyecto)
+- [Despliegue en Streamlit Cloud](#despliegue-en-streamlit-cloud)
+- [Uso](#uso)
+- [Personalización](#personalización)
+- [Créditos y Licencia](#créditos-y-licencia)
 
 ---
 
-## Requisitos
+## ✨ Características
+
+- 💬 Interfaz tipo chat con respuestas en tiempo real.
+- 🦖 Asistente virtual personalizado "Mr. Epic".
+- 📖 Contexto programable para guiar conversaciones.
+- 🎨 Interfaz personalizable con logos e íconos.
+- ☁️ Despliegue sencillo en Streamlit Cloud.
+
+---
+
+## 🛠️ Requisitos
 
 - Python 3.9 o superior.
-- Clave API válida de [OpenAI](https://platform.openai.com/account/api-keys).
-- Dependencias listadas en `requirements.txt`.
+- API Key de OpenAI.
+- Dependencias en `requirements.txt`:
+
+```text
+streamlit
+openai
+```
 
 ---
 
-## Instalación y Ejecución Local
+## 🚀 Instalación y Ejecución Local
 
 ```bash
-# 1. Clona el repositorio
+# Clona el repositorio
 git clone https://github.com/TU_USUARIO/EpicChat.git
 cd EpicChat
 
-# 2. Crea un entorno virtual (opcional pero recomendado)
+# (Opcional) Crea y activa un entorno virtual
 python -m venv venv
-# Actívalo:
-# En Windows:
+# Windows
 venv\Scripts\activate
-# En Mac/Linux:
+# Linux/Mac
 source venv/bin/activate
 
-# 3. Instala las dependencias
+# Instala dependencias
 pip install -r requirements.txt
 
-# 4. Corre la aplicación
+# Ejecuta la app
 streamlit run EpicChat.py
+```
+
+---
+
+## 🔑 Configuración de la API Key de OpenAI
+
+### Método recomendado: Archivo `secrets.toml`
+
+1. Crea una carpeta `.streamlit`.
+2. Dentro crea `secrets.toml` con:
+
+```toml
+OPENAI_API_KEY = "tu-api-key"
+```
+
+En tu código:
+
+```python
+import streamlit as st
+import openai
+
+openai.api_key = st.secrets["OPENAI_API_KEY"]
+```
+
+---
+
+## 📂 Estructura del Proyecto
+
+```
+EpicChat/
+├── images/
+│   ├── epiclab.png
+│   ├── youtube.png
+│   ├── insta.png
+│   └── linkedin.png
+├── .streamlit/
+│   └── secrets.toml
+├── requirements.txt
+├── EpicChat.py
+└── README.md
+```
+
+---
+
+## 🌐 Despliegue en Streamlit Cloud
+
+1. Sube tu proyecto a GitHub.
+2. Entra a [Streamlit Cloud](https://streamlit.io/cloud).
+3. Crea una nueva app, seleccionando repo y archivo `EpicChat.py`.
+4. Añade tu API key en Secrets:
+
+```toml
+OPENAI_API_KEY = "tu-api-key"
+```
+
+5. ¡Haz deploy y comparte tu URL!
+
+---
+
+## 🚦 Uso
+
+- Abre la aplicación.
+- Ingresa preguntas en la barra inferior.
+- Recibe respuestas inmediatas y sugerencias útiles sobre el EPIC Lab.
+
+---
+
+## 🎯 Personalización
+
+- Cambia logos en la carpeta `images/`.
+- Modifica `SYSTEM_PROMPT` para ajustar la personalidad de Mr. Epic.
+- Añade estilos personalizados vía CSS con:
+
+```python
+st.markdown("<style>...</style>", unsafe_allow_html=True)
+```
+
+---
+
+## 📜 Créditos y Licencia
+
+- Desarrollado por: Braulio Alejandro Lozano Cuevas
+- Tecnologías: [Streamlit](https://streamlit.io/) y [OpenAI](https://openai.com/)
+
+> EpicChat es parte del programa MAD Fellowship del EPIC Lab ITAM, diseñado para impulsar la creatividad, innovación y emprendimiento entre estudiantes.
+
+---
+
+¡Disfruta usando EpicChat! 🚀🦖
