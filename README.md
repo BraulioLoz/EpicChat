@@ -11,7 +11,6 @@
 - [Instalación y Ejecución Local](#instalación-y-ejecución-local)
 - [Configuración de la API Key de OpenAI](#configuración-de-la-api-key-de-openai)
 - [Estructura del Proyecto](#estructura-del-proyecto)
-- [Despliegue en Streamlit Cloud](#despliegue-en-streamlit-cloud)
 - [Uso](#uso)
 - [Personalización](#personalización)
 - [Créditos](#créditos)
@@ -101,21 +100,6 @@ EpicChat/
 ├── EpicChat.py
 └── README.md
 ```
-
----
-
-## Despliegue en Streamlit Cloud
-
-1. Sube tu proyecto a GitHub.
-2. Entra a [Streamlit Cloud](https://streamlit.io/cloud).
-3. Crea una nueva app, seleccionando repo y archivo `EpicChat.py`.
-4. Añade tu API key en Secrets:
-
-```toml
-OPENAI_API_KEY = "tu-api-key"
-```
-
-5. ¡Haz deploy y comparte tu URL!
 
 ---
 
