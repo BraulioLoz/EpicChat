@@ -23,22 +23,6 @@ st.set_page_config(
     initial_sidebar_state="auto"
 )
 
-# 1. CSS para agrandar la barra de st.chat_input (altura y ancho)
-st.markdown("""
-<style>
-/* Aumentar altura y fuente del textarea dentro de st.chat_input */
-div[data-testid="stChatInput"] textarea {
-    min-height: 80px;    /* Ajusta para más/menos altura */
-    font-size: 1.1rem;   /* Ajusta para texto más grande */
-}
-
-/* Controlar el ancho máximo y centrar */
-div[data-testid="stChatInput"] {
-    max-width: 800px;
-    margin: 0 auto;
-}
-</style>
-""", unsafe_allow_html=True)
 
 ################################
 # Barra lateral
