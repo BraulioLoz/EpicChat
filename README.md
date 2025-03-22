@@ -14,11 +14,11 @@
 - [Despliegue en Streamlit Cloud](#despliegue-en-streamlit-cloud)
 - [Uso](#uso)
 - [Personalización](#personalización)
-- [Créditos y Licencia](#créditos-y-licencia)
+- [Créditos](#créditos)
 
 ---
 
-## ✨ Características
+## Características
 
 - 💬 Interfaz tipo chat con respuestas en tiempo real.
 - 🦖 Asistente virtual personalizado "Mr. Epic".
@@ -28,7 +28,7 @@
 
 ---
 
-## 🛠️ Requisitos
+## Requisitos
 
 - Python 3.9 o superior.
 - API Key de OpenAI.
@@ -41,7 +41,7 @@ openai
 
 ---
 
-## 🚀 Instalación y Ejecución Local
+## Instalación y Ejecución Local
 
 ```bash
 # Clona el repositorio
@@ -64,7 +64,7 @@ streamlit run EpicChat.py
 
 ---
 
-## 🔑 Configuración de la API Key de OpenAI
+## Configuración de la API Key de OpenAI
 
 ### Método recomendado: Archivo `secrets.toml`
 
@@ -86,7 +86,7 @@ openai.api_key = st.secrets["OPENAI_API_KEY"]
 
 ---
 
-## 📂 Estructura del Proyecto
+## Estructura del Proyecto
 
 ```
 EpicChat/
@@ -104,7 +104,7 @@ EpicChat/
 
 ---
 
-## 🌐 Despliegue en Streamlit Cloud
+## Despliegue en Streamlit Cloud
 
 1. Sube tu proyecto a GitHub.
 2. Entra a [Streamlit Cloud](https://streamlit.io/cloud).
@@ -119,7 +119,7 @@ OPENAI_API_KEY = "tu-api-key"
 
 ---
 
-## 🚦 Uso
+## Uso
 
 - Abre la aplicación.
 - Ingresa preguntas en la barra inferior.
@@ -127,7 +127,7 @@ OPENAI_API_KEY = "tu-api-key"
 
 ---
 
-## 🎯 Personalización
+## Personalización
 
 - Cambia logos en la carpeta `images/`.
 - Modifica `SYSTEM_PROMPT` para ajustar la personalidad de Mr. Epic.
@@ -139,12 +139,11 @@ st.markdown("<style>...</style>", unsafe_allow_html=True)
 
 ---
 
-## 📜 Créditos y Licencia
+## Créditos
 
 - Desarrollado por: Braulio Alejandro Lozano Cuevas
 - Tecnologías: [Streamlit](https://streamlit.io/) y [OpenAI](https://openai.com/)
 
-> EpicChat es parte del programa MAD Fellowship del EPIC Lab ITAM, diseñado para impulsar la creatividad, innovación y emprendimiento entre estudiantes.
 
 ---
 
